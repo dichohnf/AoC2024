@@ -9,14 +9,12 @@ class Map:
         self.__calculate_antinode_unique_positions__()
         return sum(position.antinode for row in self.positions for position in row)
 
-
 class Position:
     def __init__(self, map, position, char):
         self.map = map
         self.position = position
         self.char = char
         self.antinode = False
-
 
     def writable_antinode(self):
         if self.char == '.':
